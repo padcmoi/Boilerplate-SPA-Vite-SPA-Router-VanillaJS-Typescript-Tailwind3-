@@ -4,6 +4,10 @@
 
 This project is a boilerplate to quickly start a web application using Vite, VanillaJS, TypeScript, Tailwind 3, and a router for a single-page application (SPA).
 
+## Demo
+
+Check out the live demo: [Demo](https://boilerplate-router-spa-vanillajs.netlify.app/)
+
 ## Prerequisites
 
 - Node.js (version 20 or higher)
