@@ -6,7 +6,7 @@ import { setupCounter } from "../../components/counter";
 
 const Home: IRouteComponentArgs = (params, query) => {
   const template = `
-    <div class="flex flex-col items-center justify-center min-h-screen ">
+    <div class="flex flex-col items-center justify-center min-h-[80vh] ">
       <div class="flex space-x-4">
         <a href="https://vite.dev" target="_blank">
           <img src="${viteLogo}" class="logo w-16 h-16" alt="Vite logo" />

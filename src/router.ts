@@ -1,11 +1,8 @@
-import HomePage from "./pages/Home/index";
-import ContactPage from "./pages/Contact/index";
-import ArticlePage from "./pages/Article/index";
-import ArticleDetailsPage from "./pages/Article/[id]/index";
+import { routes } from "./routes";
 
 export type IRouteComponentArgs = (params: { [key: string]: string }, query: { [key: string]: string }, seo: IRoute["meta"]["seo"]) => { template: string; script: () => void };
 
-interface IRoute {
+export interface IRoute {
   label: string;
   path: string;
   component?: IRouteComponentArgs;
@@ -19,59 +16,6 @@ interface IRoute {
     [key: string]: any;
   };
 }
-
-export const routes: IRoute[] = [
-  {
-    label: "Home",
-    path: "/",
-    component: HomePage,
-    meta: {
-      requiresAuth: false,
-      seo: {
-        title: "Home Page",
-        description: "Welcome to the Home Page",
-      },
-    },
-  },
-  {
-    label: "Contact",
-    path: "/contact",
-    component: ContactPage,
-    meta: {
-      requiresAuth: false,
-      seo: {
-        title: "Contact Page",
-        description: "Get in touch with us",
-      },
-    },
-  },
-  {
-    label: "Article",
-    path: "/article",
-    component: ArticlePage,
-    children: [
-      {
-        label: "Details",
-        path: "/:id",
-        component: ArticleDetailsPage,
-        meta: {
-          requiresAuth: true,
-          seo: {
-            title: "Article Details",
-            description: "Read the full article",
-          },
-        },
-      },
-    ],
-    meta: {
-      requiresAuth: false,
-      seo: {
-        title: "Articles",
-        description: "Browse our articles",
-      },
-    },
-  },
-];
 
 class Router {
   private routes: { [key: string]: { component: IRouteComponentArgs; meta?: IRoute["meta"] } } = {};

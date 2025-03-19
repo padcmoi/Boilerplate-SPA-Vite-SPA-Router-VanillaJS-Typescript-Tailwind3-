@@ -1,4 +1,4 @@
-import { routes } from "../router";
+import { routes } from "../routes";
 
 const Home = () => {
   const template = `
@@ -30,7 +30,7 @@ const Home = () => {
         ${routes
           .map(
             (route) => `
-          <li><a href="${route.path}" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400">${route.label}</a></li>
+          <li><a href="${route.path}" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400" ${route.path.startsWith("/") ? "" : 'target="_blank"'}>${route.label}</a></li>
         `
           )
           .join("")}
@@ -46,7 +46,7 @@ const Home = () => {
           .map(
             (route) => `
           <li>
-            <a href="${route.path}" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400">${route.label}</a>
+            <a href="${route.path}" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-indigo-400" ${route.path.startsWith("/") ? "" : 'target="_blank"'}>${route.label}</a>
           </li>
         `
           )
