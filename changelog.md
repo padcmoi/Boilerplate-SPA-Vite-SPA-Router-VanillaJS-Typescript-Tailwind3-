@@ -13,3 +13,11 @@
 ### Changed
 
 ### Fixed
+
+## [1.0.2] - 2025-03-19
+### Added
+
+### Changed
+
+### Fixed
+- Fix issues with invisible text display on the contact page.
