@@ -5,7 +5,7 @@ const Home: IRouteComponentArgs = (params, query) => {
     <div class="flex items-center justify-center min-h-[80vh]">
       <div class="p-8 rounded-lg w-full max-w-md">
         <h1 class="text-2xl font-bold mb-6 text-center">Contact Us</h1>
-        <form name="contact" netlify>
+        <form name="contact" method="POST" data-netlify="true">
           <div class="mb-4">
             <label class="block text-sm font-bold mb-2" for="name">Name</label>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline bg-white text-black dark:bg-gray-800 dark:text-white" id="name" type="text" placeholder="Your name">
